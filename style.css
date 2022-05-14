@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'koulen', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #5433FF, #20BDFF, #A5FECB);
+}
+
+::selection{
+    color: #fff;
+    background: #c471ed;
+  }
+.wrapper
+{
+    background-color: #FFFFFF;
+    width: 100%;
+    box-shadow: 7px 7px 20px rgba(59, 59, 59, 0.15);
+    margin: 20px;
+    border-radius: 7px;
+}
+
+.input-part input::placeholder{
+    color: #bfbfbf;
+  }
+
+.wrapper header{
+    font-size: 21px;
+    color: black;
+    font-weight: 500;
+    padding : 16px 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin:0 25px;
+    border-bottom: 1px solid #20BDFF;
+}
+
+.wrapper.active header{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.wrapper.active header i{
+    margin-left: 5px;
+    font-size: 30px;
+  }
+
+.wrapper.active .input-part{
+    display: none;
+  }
+
+header i{
+    cursor: pointer;
+    font-size: 0em;
+    margin-right: 8px;
+}
+
+.wrapper .input-part{
+    margin: 20px 25px 30px;
+   
+}
+
+.input-part :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+.input-part input{
+    text-align: center;
+    padding: 5px 15px;
+    border: 1px solid #20BDFF;
+}
+
+.input-part button{
+    color: #ffffff;
+    background: linear-gradient(to right, #5433FF, #20BDFF, #A5FECB);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.input-part button:hover{
+    background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
+}
+
+.input-part .seperator
+{
+    height: 1px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #5433FF, #20BDFF, #A5FECB);
+    margin: 25px 0;
+}
+
+.seperator::before
+{
+    content: "or";
+    background-color: #FFFFFF;
+    padding: 0 15px;
+    font-size: 17px;
+    color: #bfbfbf;
+}
+
+
+.input-part .info-txt
+{
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-part .info-txt.error
+{
+    /* display: block; */
+    color: #f64f59;
+    background-color: #ffdee0;
+    border: 2px solid #f5c6cb;
+}
+
+.input-part .info-txt.pending
+{
+    color: #0c5460;
+    /* display: block; */
+    background-color: #d1ecf1;
+    border: 1px solid #0c5460;
+}
+
+.input-part input:is(:focus, :valid)
+{
+    border: 2px solid #20BDFF;
+}
+
+.wrapper .weather-part
+{   
+    margin-top: 5px 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+}
+
+.weather-part img{
+    max-width: 125px;
+}
+
+.weather-part .temp
+{
+    display: flex;
+    font-size: 72px;
+    font-weight: 600;
+}
+
+.weather-part .temp .numb
+{
+    font-weight: 600;
+}
+
+.weather-part .temp .deg{
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+
+
+.weather-part .weather{
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+
+.weather-part .location
+{
+    align-items: flex-start;
+    align-items: center;
+    font-size: 21px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.location i{
+    font-size: 21px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details
+{
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #20BDFF;
+    justify-content: space-between;
+}
+
+.bottom-details .column
+{
+    width: 100%;
+    padding: 15px 0;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column i{
+    color:#20BDFF;
+    font-size: 40px;
+}
+
+.column.Humidity
+{
+    border-left: 1px solid #20BDFF;
+}
+
+.details .temp, .Humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.column .details{
+    margin-left: 3px;
+  }
+
+.details .temp .degree
+{
+    margin: 0;
+    font-size: 14px;
+    padding: 0 2px 0 1px;
+}
+.column .details p{
+    font-size: 14px;
+    margin-top: -6px;
+  }
+
+.Humidity i{
+    font-size: 37px;
+  }
